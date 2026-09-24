@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cook & Bake Academy sign-up administration.">
+    <title>Sign-ups | Cook &amp; Bake Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <main class="admin-page">
+      <p class="eyebrow">This device only</p>
+      <h1>Course sign-ups</h1>
+      <p>Records are stored in this browser’s local storage. Export before clearing browser data.</p>
+      <div class="admin-actions">
+        <a class="button button-secondary" href="index.html">Back to courses</a>
+        <button id="export-csv" class="button button-primary" type="button">Export CSV</button>
+      </div>
+      <p id="signup-count" aria-live="polite"></p>
+      <div class="table-wrap"><table class="admin-table"><thead id="signup-head"></thead><tbody id="signup-list"></tbody></table></div>
+    </main>
+  </body>
+</html>
