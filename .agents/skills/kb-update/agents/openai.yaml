@@ -1,0 +1,4 @@
+interface:
+  display_name: "KB Update"
+  short_description: "Keep course data and brochures aligned"
+  default_prompt: "Use $kb-update to update the course catalogue and matching knowledge-base brochure, then run the evaluation and report changed files and score."

@@ -38,7 +38,7 @@ You may join the same session in another running intake within 3 months, subject
 
 ## Can I cater for my allergy?
 
-Tell us when you sign up. We can often substitute an ingredient, but our kitchens handle nuts, gluten, dairy, eggs and shellfish, so we cannot guarantee an allergen-free environment. BAK-104 Macaron Masterclass is not suitable for nut allergies.
+Tell us when you sign up. We can often substitute an ingredient, but our kitchens handle nuts, gluten, dairy, eggs and shellfish, so we cannot guarantee an allergen-free environment. BAK-104 Macaron Masterclass is nut-free, but contact us about any other allergies.
 
 ## What should I wear?
 

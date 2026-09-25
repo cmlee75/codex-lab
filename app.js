@@ -94,9 +94,9 @@ signupForm.addEventListener("submit", async (event) => {
   const fields = { name: document.querySelector("#full-name"), email: document.querySelector("#email"), mobile: document.querySelector("#mobile"), consent: document.querySelector("#consent") };
   const name = fields.name.value.trim(); const email = fields.email.value.trim(); const mobile = fields.mobile.value.trim();
   if (name.length < 2) showError(fields.name, "Enter your full name (at least 2 characters).");
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) showError(fields.email, "Enter a valid email address.");
-  else if (!/^(?:\+65\s?)?[689]\d{3}\s?\d{4}$/.test(mobile)) showError(fields.mobile, "Enter a Singapore mobile number, for example +65 9123 4567.");
-  else if (!fields.consent.checked) showError(fields.consent, "You must agree to be contacted about this sign-up.");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) showError(fields.email, "Enter a valid email address.");
+  if (!/^(?:\+65\s?)?[689]\d{3}\s?\d{4}$/.test(mobile)) showError(fields.mobile, "Enter a Singapore mobile number, for example +65 9123 4567.");
+  if (!fields.consent.checked) showError(fields.consent, "You must agree to be contacted about this sign-up.");
   if (formMessage.textContent) return;
   const signups = getSignups(); const course = state.selectedCourse;
   const signup = { reference: makeReference(signups), submitted_at: new Date().toISOString(), course_code: course.code, course_title: course.title, course_fee: course.fee, course_weeks: course.weeks, course_schedule: course.when, course_campus: course.campus, intake: intakeSelect.value, full_name: name, email, mobile, experience: document.querySelector("#experience").value, allergies: document.querySelector("#allergies").value.trim(), consent: true, newsletter: document.querySelector("#newsletter").checked };

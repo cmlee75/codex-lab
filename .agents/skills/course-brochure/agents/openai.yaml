@@ -1,0 +1,4 @@
+interface:
+  display_name: "Course Brochure"
+  short_description: "Create a printable A4 course brochure"
+  default_prompt: "Use $course-brochure with the requested course code to create a one-page A4 HTML brochure from the catalogue and matching brochure, stopping on any source disagreement."

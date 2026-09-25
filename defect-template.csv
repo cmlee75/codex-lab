@@ -1,0 +1,2 @@
+id,severity,viewport,step,expected,observed,screenshot
+D01,High,375px,4,Inline error visible,Error hidden below the fold,d01.png
