@@ -30,7 +30,7 @@
           <p class="hero-pitch">Practical cooking and baking courses for curious home cooks, serious bakers, and everyone in between.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#courses">Browse courses</a>
-            <a class="button button-secondary" href="mailto:hello@cookandbake.academy?subject=Course%20assistant%20enquiry">Ask our course assistant</a>
+            <button class="button button-secondary" type="button" data-assistant-open>Ask our course assistant</button>
           </div>
         </div>
         <div class="hero-collage" aria-hidden="true">
@@ -145,11 +145,44 @@
       </section>
     </dialog>
 
+    <dialog id="assistant-dialog" aria-labelledby="assistant-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="eyebrow">Course assistant</p>
+          <h2 id="assistant-title">Ask a question</h2>
+        </div>
+        <div class="assistant-dialog-actions">
+          <button id="assistant-settings-toggle" class="assistant-settings-toggle" type="button" aria-expanded="false" aria-controls="assistant-settings">Settings</button>
+          <button id="assistant-close" class="dialog-close" type="button" aria-label="Close course assistant">×</button>
+        </div>
+      </div>
+      <section id="assistant-settings" class="assistant-settings" aria-label="ChatGPT mode settings" hidden>
+        <form id="assistant-settings-form">
+          <label for="assistant-api-key">OpenAI API key</label>
+          <input id="assistant-api-key" type="password" autocomplete="off" spellcheck="false">
+          <label for="assistant-model">Model</label>
+          <input id="assistant-model" type="text" value="gpt-6-luna" autocomplete="off">
+          <button class="button button-secondary" type="submit">Save for this session</button>
+        </form>
+        <p id="assistant-settings-status" class="assistant-status" aria-live="polite"></p>
+      </section>
+      <form id="assistant-form">
+        <label for="assistant-question">How can we help?</label>
+        <div class="assistant-input-row">
+          <input id="assistant-question" type="search" autocomplete="off" placeholder="Try: Are macarons safe for a nut allergy?" required>
+          <button class="button button-primary" type="submit">Ask</button>
+        </div>
+      </form>
+      <p id="assistant-status" class="assistant-status" aria-live="polite"></p>
+      <div id="assistant-response" aria-live="polite"></div>
+    </dialog>
+    <button class="assistant-fab" type="button" data-assistant-open>Ask a question</button>
     <footer class="site-footer">
       <a class="wordmark" href="#top">Cook <span>&amp;</span> Bake</a>
       <p>Hands-on cooking and baking classes in Singapore.</p>
       <a href="mailto:hello@cookandbake.academy">hello@cookandbake.academy</a>
     </footer>
+    <script type="module" src="js/chat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

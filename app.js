@@ -35,7 +35,7 @@ function createCourseCard(course) {
   const summary = document.createElement("p");
   const details = document.createElement("dl");
   const button = document.createElement("button");
-  article.className = "course-card";
+  article.className = "course-card"; article.id = `course-${course.code}`;
   image.src = imageUrl(course.img); image.alt = `${course.title} course`; image.loading = "lazy"; image.width = 900; image.height = 563;
   body.className = "course-card-body"; metadata.className = "course-meta";
   [course.code, course.level, course.campus].forEach((item) => { const value = document.createElement("span"); value.textContent = item; metadata.append(value); });
